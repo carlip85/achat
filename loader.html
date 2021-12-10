@@ -1,0 +1,51 @@
+<html>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <script src="makeJSON.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div id="totalDiv">
+        <div id="namer" class="row">
+            Cares For Kids Chat-a-thon
+        </div><p>
+            <div id="sigBox" role="group" aria-label="First group">
+                <div id=koyyNotice>
+                    <button type="button" id="koyySig" class="btn" onclick="raiseHand(id)" disabled="true"></button>
+                    KOYY
+                </div>
+                <div id="kfgoNotice">
+                    <button type="button" id="kfgoSig" class="btn" onclick="raiseHand(id)" disabled="true"></button>
+                    KFGO
+                </div>
+                <div id="kvoxNotice">
+                    <button type="button" id="kvoxSig" class="btn" onclick="raiseHand(id)" disabled="true"></button>
+                    KVOX
+                </div>
+
+            </div>
+        <div class="row">
+            <div class="form-floating">
+                <textarea readonly class="form-control"  id="msgTxt"
+                    onfocus="clearContents(this);"></textarea>
+            </div>
+        </div>
+             <div id="subChat">
+                <form action="">
+                <select name="station" id="stationCall" onchange="makeChange(value)">
+                    <option value="default">Select Station</option>
+                    <option value="koyySig">KOYY</option>
+                    <option value="kfgoSig">KFGO</option>
+                    <option value="kvoxSig">KVOX</option>
+
+
+                    <label for="uName">Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter Name" style="width:128px;">
+                    <input type="textarea" id="msg" name="msg" placeholder="Chat here" style="min-width: 370px;">
+                    <button type="button" id="chatEnter" class="btnChat" onclick="enterChat(msg.value)">Enter</button>
+                  </form> 
+                </select>
+            </div>
+           
+        </div>
+    </div>
+</meta>  
+</html>
